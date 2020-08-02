@@ -1,0 +1,38 @@
+{% extends 'navbar.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .container{
+        margin-top: 110px;
+        background-color: khaki;       
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: left;
+    }
+</style>    
+</head>
+<body>
+    <div class="container">
+        <h3>Create an Investment Product</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" name="submit">
+        </form>
+    </div>
+    
+
+{% endblock %}    
+</body>
+</html>

@@ -1,0 +1,240 @@
+{% extends 'navbar.html' %}
+{% block content %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{% static 'invest/css/user_panel.css' %}">
+  <title>Document</title>
+
+</head>
+<body>      
+  <div class="w3-container w3-teal"> 
+    <div class="col-md-2">
+      <img class="circle-image profile-picture" src="/images/user.png" alt="Rohit Upadhyay" width="160" height="160">
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-color-3" style="margin-bottom:0">Hello, <h2 class="mobile-on">Rohit Upadhyay!
+        
+          <br>
+          <a href="/user/me/verify" class="btn btn-1 btn-xs text-spacing">
+            <i class="fa fa-times-circle" aria-hidden="true"></i> Get full access to Growpital's features. Verify account.
+          </a></h2>
+        
+      <p class="text-color-3 lh-xs">Your Growpital wallet: &nbsp;<strong> 0</strong></p>
+      <a href="browse" class="btn-profile-link"><strong>Browse Investment Options</strong></a> <a href="https://www.instagram.com/cropital" class="btn-profile-link"><strong>Be updated</strong></a>
+    </div>
+  
+  <div class="col-md-4">
+    <a href="logout" class="btn-log-out pull-right">LOG OUT</a>
+    <br><br><br>
+    <div class="row pull-right">
+      <a class="btn btn-1 text-spacing btn-wrap btn-profile-width" type="button" href="/user/me/wallet">
+        ADD FUNDS TO YOUR WALLET
+      </a><br><br>
+      
+        <a class="btn btn-inactive text-spacing btn-wrap btn-profile-width" type="button" disabled="">
+          WITHDRAW FUNDS <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Account must be verified to be able to withdraw money"></span>
+        </a><br><br>    
+    </div>
+  </div>
+</div>
+<article class="w3-container"> 
+  <div class="col-md-4 no-padding">
+    <div class="content-frame-lr">
+      
+          <h3 class="text-color-4 profile-reco-header">Your Recognitions (1)</h3>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star-o" aria-hidden="true"></i> <span><strong>Member of Growpital community</strong></span><br>We're glad you're here! Be one of our investors today! Take a look at <a href="browse"><strong>these farms</strong>.</a><p></p>
+          <p></p>
+        <br>
+        <div class="footer-social-icons center">
+          <div class="text-strikethru">
+            <div class="line"></div>
+            <div class="text">Share the good news!</div>
+          </div>
+          <ul class="social-icons">
+            <li><a href="http://www.facebook.com/sharer/sharer.php?u=https://www.cropital.com" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://twitter.com/share?url=https://www.cropital.com&amp;via=cropitalph&amp;text=I%20support%20our%20farmers!" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.cropital.com" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-8 padding-left-desktop">
+    <div class="content-frame-lr">
+			<div>
+			  <ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#wallet-transactions" aria-controls="#wallet-transactions" role="tab" data-toggle="tab">Wallet Transactions (0)</a></li>
+			    <li role="presentation"><a href="#pledges" aria-controls="pledges" role="tab" data-toggle="tab">Pledges (1)</a></li>
+			    <li role="presentation"><a href="#investments" aria-controls="investments" role="tab" data-toggle="tab">Investments (0)</a></li>
+          <li role="presentation"><a href="#claims" aria-controls="claims" role="tab" data-toggle="tab">Payment Claims (0)</a></li>
+			  </ul>
+			</div>
+			<div class="tab-content">
+			  <div role="tabpanel" class="tab-pane fade in active" id="wallet-transactions">
+          
+            <h3 class="center">No wallet transactions yet.</h3>
+            <em><p class="center text-color-2">Add funds to your wallet today and start supporting farms!</p></em>
+          
+			  </div>
+			  <div role="tabpanel" class="tab-pane fade" id="pledges">
+          <h3>Your Pledges</h3>
+          <div class="table-container table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Pledge Date</th>
+                  <th>Name of Farm/Campaign</th>
+                  <th>Amount Committed</th>
+                  <th>Balance</th>
+                  <th>Fulfilled</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <td>1</td>
+                  
+                  <td>
+                    6/19/2020
+                  </td>
+                  
+                  <td>Tay Bobby's Farm</td>
+                  <td>₱ 5,000</td>
+                  <td>₱ 0</td>
+                  <td>
+                    
+                      <p class="red">NO</p>
+                    
+                  </td>
+                  <td><a href="/farms/1824">View Details</a></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          <p class="text-color-2 center"><em>Important Note:</em><br>Pledges are on a <strong>first-come, first-served basis</strong> (based on payment confirmation).<br class="mobile-off">To secure your slot on the farms/campaigns, kindly pay and submit your payment claims <strong>as soon as possible</strong>.
+            <br><br>On Unfulfilled Pledges: Once the farm/campaign you've pledged to has been fully-funded, your pledge balances will be set to zero and succeeding payments will go directly to your wallet which you can use to invest on future farms/campaigns.</p>
+			  </div>
+			  <div role="tabpanel" class="tab-pane fade" id="investments">
+          <h3>Your Investments</h3>
+          <div class="table-container table-responsive">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Date of Investment</th>
+                    <th>Name of Farm/Campaign</th>
+                    <th>Crop/Type</th>
+                    <th>Location</th>
+                    <th>Amount Invested</th>
+                    <th>Goal</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+          </div>
+          <p class="text-color-2 lh-xs center"><em>Important Note:</em> <br>We've sent the invoice of your investment to your email <br>
+          <span class="text-color-5"><strong>r23hit@gmail.com</strong></span><br>
+             and notifications are sent once farms/campaigns are successfully funded.</p>
+			  </div>
+			  <div role="tabpanel" class="tab-pane fade" id="claims">
+          <h3>Your Payment Claims</h3>
+          <div class="table-container table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Date Updated</th>
+                  <th>Image</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+          <p class="text-color-2 center"><em>Important Note:</em><br>We'll be confirming payments within <strong>3-5 banking days</strong> after receipt. <br class="mobile-off">It will be automatically credited to your account upon confirmation.</p>
+			  </div>
+			</div>
+    </div>
+  </div>
+  
+  
+</article>
+
+
+<section class="w3-container w3-grey"> 
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-links">
+        <div class=" col-md-3 col-sm-3 col-xs-12">
+          <strong><p class="text-color-3 margin-sm">About Us</p></strong>
+          <a href="/about/cropital"><p class="text-color-3 margin-sm">What is Growpital</p></a>
+          <a href="/about/cropital#team"><p class="text-color-3 margin-sm">Who We Are</p></a>
+          <a href="http://blog.cropital.com"><p class="text-color-3 margin-sm">Blog</p></a>
+          <br class="mobile-on">
+        </div>
+        <div class=" col-md-3 col-sm-3 col-xs-12">
+          <strong><p class="text-color-3 margin-sm">Learn</p></strong>
+          <a href="/learn/how-it-works"><p class="text-color-3 margin-sm">How It Works</p></a>
+          <a href="/learn/risk-management-structure"><p class="text-color-3 margin-sm">How We Manage Risks</p></a>
+          <a href="/help"><p class="text-color-3 margin-sm">FAQs</p></a>
+          <br class="mobile-on">
+        </div>
+        <div class=" col-md-3 col-sm-3 col-xs-12">
+          <strong><p class="text-color-3 margin-sm">Get Involved</p></strong>
+          <a href="/contribute"><p class="text-color-3 margin-sm">How You Can Contribute</p></a>
+          <a href="/partners"><p class="text-color-3 margin-sm">Partner Pages</p></a>
+          <br class="mobile-on">
+        </div>
+        <div class=" col-md-3 col-sm-3 col-xs-12">
+          <strong><p class="text-color-3 margin-sm">Help</p></strong>
+          <a href="/help"><p class="text-color-3 margin-sm">Help Center</p></a>
+          <a href="/contact"><p class="text-color-3 margin-sm">Contact Us</p></a>
+          <p class="text-color-3 margin-sm text-xs">Need help? Email us at <a href="mailto:support@cropital.com" class="text-color-3">support@growpital.com</a></p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class=" col-md-6 col-xs-12">
+          <a href="/"><img class="footer-logo" src="/images/v3.png"></a>
+          <br>
+          <p class="text-color-3 footer-text">Investing or Lending through Growpital involves risk of principal loss. Growpital does not guarantee repayment or return on investment.</p>
+          <br>
+          <p class="text-xs lh-sm">By using this site, you agree to the <a href="/about/terms"><span class="text-color-lg margin-sm">Terms &amp; Conditions</span>.</a><br>© 2020 Growpital Enterprises Corporation. All Rights Reserved.</p>
+          <br>
+        </div>
+        <div class=" col-md-6 col-xs-12 mobile-pull-right">
+          <p class="text-color-3 footer-text margin-b-xs">Connect with Us!</p>
+          <a href="https://fb.com/cropital">
+            <img class="icon" src="/images/social-media/fb-wh.png" height="25px"></a>
+          <a class="footer-icons" href="https://instagram.com/cropital">
+            <img class="icon" src="/images/social-media/ig-wh.png" height="25px"></a>
+          <a class="footer-icons" href="https://www.linkedin.com/company/cropital">
+            <img class="icon" src="/images/social-media/li-wh.png" height="25px"></a>
+            <br><br>
+          <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/cropital" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark" data-width="200px" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=684898918322913&amp;color_scheme=dark&amp;container_width=555&amp;href=https%3A%2F%2Fwww.facebook.com%2Fcropital&amp;layout=standard&amp;locale=en_GB&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=200px"><span style="vertical-align: bottom; width: 225px; height: 28px;"><iframe name="f2ed7f67eb123c8" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=684898918322913&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df14c550522032a%26domain%3Dwww.cropital.com%26origin%3Dhttps%253A%252F%252Fwww.cropital.com%252Ff38e4a3d470e448%26relation%3Dparent.parent&amp;color_scheme=dark&amp;container_width=555&amp;href=https%3A%2F%2Fwww.facebook.com%2Fcropital&amp;layout=standard&amp;locale=en_GB&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;width=200px" style="border: none; visibility: visible; width: 225px; height: 28px;" class=""></iframe></span></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" id="back-to-top" title="Back to top" class="show"></a>
+  <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
+  <div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>
+  
+</section>
+
+{% endblock %}
+</body>
+</html>

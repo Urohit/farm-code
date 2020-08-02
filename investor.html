@@ -1,0 +1,143 @@
+{%  extends 'navbar.html' %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+    .container1 {
+        float: left;        
+        margin-top: 110px;
+        margin-left: 10%;
+        padding: 20px;
+        width: 20%;
+        height: 100px;         
+        background-color: rgb(219, 223, 233);
+        border-radius: 2ch;
+        font-family:Arial, Helvetica, sans-serif;              
+      }
+      .container2 {
+        float: left;        
+        margin-top: 110px;
+        margin-left: 2.5%;
+        padding: 20px;
+        width: 30%;
+        height: 100px;         
+        background-color: rgb(219, 223, 233);    
+        border-radius: 2ch;
+        font-family:Arial, Helvetica, sans-serif;        
+      }
+      .container3 {
+        float: left;        
+        margin-top: 110px;
+        margin-right: 10%;
+        margin-left: 2.5%;
+        padding: 20px;
+        width: 15%;
+        height: 100px;         
+        background-color: rgb(219, 223, 233);  
+        border-radius: 2ch;  
+        font-family:Arial, Helvetica, sans-serif;             
+      }
+      .container4 {
+        float: left; 
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;             
+        padding: 20px;
+        width: 76%;
+        height: 30px;         
+        background-color: rgb(219, 223, 233);   
+        font-family:Arial, Helvetica, sans-serif;            
+      }
+      .container5 {
+        float: left;         
+        margin-left: 10%;
+        margin-right: 10%;             
+        padding: 20px;
+        width: 76%;                
+        background-color: rgb(219, 223, 233);   
+        font-family:Arial, Helvetica, sans-serif;                    
+      }
+      .container5 table tr th, td{
+        padding-left: 20px;
+        padding-right: 20px;
+        float: center;
+        font-family:Arial, Helvetica, sans-serif;  
+      }
+      .footer {
+        float: left;         
+        margin-left: 10%;
+        margin-right: 10%;             
+        padding: 20px;
+        width: 76%;                 
+        background-color: rgb(219, 223, 233);             
+      }
+    .button2 {background-color: #b0dfee;}
+    .button3 {background-color: #f44336;}
+</style>
+</head>
+<body>
+    <div class="container1">
+        <h3>Customer: {{investors.first_name}} {{investors.last_name}}</h3><hr>
+
+        <button class="button button2">Update Customer</button>
+        <button class="button button3">Delete Customer</button> 
+    </div>
+    <div class="container2">
+        <h5>Customer Information</h5><hr>
+        <h5>Email: {{investors.email}}</h5>
+        <h5>Username: {{investors.username}}</h5>
+
+        
+    </div>
+    <div class="container3">
+        <table class="table">
+            <tr>
+                <th>Total Orders</th>
+                <th>Total Investment</th>
+            </tr>  
+            <tr>
+              <td>{{orders_count}}</td>
+            </tr>  
+        </table>
+        
+    </div>
+    <div class="container4">
+        
+                
+    </div>
+    <div class="container5">
+      <table class="table">
+        <tr>
+          <th>Investment Type</th>
+          <th>Payout Periods</th>
+          <th>Tenure</th>
+          <th>Status</th>
+          <th>Remove</th>          
+        </tr>
+        {% for order in orders %}
+          <tr>
+            <td>{{order.investment}}</td>
+            <td>{{order.investment.payouts}}</td>
+            <td>{{order.investment.tenure}}</td>         
+            <td>{{order.status}}</td>
+            <td><button class="button button3">Delete</button></td>                  
+          </tr>
+        {% endfor %}  
+        
+      </table>
+                
+    </div>   
+    <div class="footer">
+        <h3>Footer</h3><hr>
+                
+    </div>    
+{% endblock %}
+</body>
+</html>

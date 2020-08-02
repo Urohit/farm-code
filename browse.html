@@ -1,0 +1,38 @@
+{% extends 'navbar.html'%}
+{% block content %}
+{% load static %}
+{% static 'invest/images' as baseUrl %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{% static 'invest/css/browse.css' %}">
+
+</head>
+<body>
+  <div class="w3-container w3">
+    <Center><h1>Investment Options</h1></Center><br>
+    <Center><img src="{% static 'invest/images/logo3.png' %}" alt="logo"></Center><br>
+  </div>    <br> 
+  <main class="grid">
+    {% for inv in invests %}
+    <article>
+      <img src="https://source.unsplash.com/random/300x200" alt="Sample photo">
+      <div class="text">
+        <p>Investment per unit: {{inv.inv_per_unit}}</p>
+            <p>Tenure: {{inv.tenure}} Years</p> 
+            <p>Payouts: {{inv.payouts}} </p> 
+            <p>Lock in: {{inv.lock_in}} Months</p>
+            <p>Return: {{inv.return_per}}%</p>
+            <p>Available Units: {{inv.avail_units}}</p>
+        <button>Add to cart</button>
+      </div>
+    </article>
+    {% endfor %}        
+  </main>
+{% endblock %}
+</body>
+</html> 
+
+  
